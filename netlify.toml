@@ -1,0 +1,11 @@
+# Static site — no build step. Form handling is Netlify's built-in
+# forms feature (detected from the data-netlify form in index.html).
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"

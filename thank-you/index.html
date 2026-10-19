@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5F6F1" />
+  <title>Thanks — Launch Point</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--paper:#F5F6F1;--ink:#182019;--muted:#5C675F;--accent:#E8491F;--accent-ink:#FFF6F2;--good:#1E8F5B}
+    @media (prefers-color-scheme: dark){:root{--paper:#12150F;--ink:#ECEEE6;--muted:#99A391;--accent:#FF8459;--accent-ink:#2A1309;--good:#49C98A;color-scheme:dark}}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;
+      display:flex;align-items:center;justify-content:center;padding:32px;
+      padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+    .card{max-width:440px;text-align:center}
+    .badge{width:56px;height:56px;border-radius:50%;background:var(--good);color:var(--accent-ink);
+      display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 20px}
+    h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;margin:0 0 12px}
+    p{color:var(--muted);font-size:17px;line-height:1.55;margin:0 0 10px}
+    a{color:var(--accent);font-family:'Archivo',sans-serif;font-weight:700;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">✓</div>
+    <h1>That's everything — thanks.</h1>
+    <p>Your answers just landed with Launch Point. We'll read through them and follow up to schedule a kickoff call, usually within a couple of business days.</p>
+    <p><a href="/">← Back to the form</a></p>
+  </div>
+</body>
+</html>

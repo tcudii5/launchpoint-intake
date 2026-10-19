@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5F6F1" />
+  <title>Launch Point — New Project Intake</title>
+  <meta name="description" content="Tell Launch Point about the app you want built." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23E8491F'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='%23FFF6F2' font-family='Arial' font-weight='bold'%3ELP%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="shell">
+    <header>
+      <div class="brandrow">
+        <span class="eyebrow">Launch Point · New Project Intake</span>
+        <span class="fillstat mono" id="fillStat">0% filled</span>
+      </div>
+      <div class="track"><span id="trackFill"></span></div>
+      <nav class="jumprail" id="jumprail" aria-label="Jump to section">
+        <a href="#s1" data-n="1">01</a>
+        <a href="#s2" data-n="2">02</a>
+        <a href="#s3" data-n="3">03</a>
+        <a href="#s4" data-n="4">04</a>
+        <a href="#s5" data-n="5">05</a>
+        <a href="#s6" data-n="6">06</a>
+        <a href="#s7" data-n="7">07</a>
+        <a href="#send" data-n="8">→</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>Let's figure out what you're building.</h1>
+        <p>Fill this in like any other form — scroll, answer what applies, skip what doesn't. Seven sections covering your business, what you actually want out of this, the app itself, accounts and payments, design, logistics, and anything else on your mind.</p>
+        <p>When you hit send, it comes straight to Launch Point — no copying or emailing anything yourself.</p>
+      </div>
+
+      <form id="intake" name="intake" method="POST" data-netlify="true" netlify-honeypot="company" action="/thank-you/">
+        <input type="hidden" name="form-name" value="intake" />
+        <p class="hp" hidden><label>Don't fill this out if you're human: <input name="company" /></label></p>
+
+        <!-- 1: ABOUT YOU -->
+        <section class="doc-section" id="s1" data-title="About you &amp; the business">
+          <span class="qnum">SECTION 01 / 07</span>
+          <h2>About you &amp; the business</h2>
+          <p class="sub">So we know who we're building this for.</p>
+
+          <div class="field">
+            <label for="contactName">Your name</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Jordan Reyes">
+          </div>
+          <div class="field">
+            <label for="businessName">Business or brand name</label>
+            <input type="text" id="businessName" name="businessName" placeholder="Reyes Family Dental">
+          </div>
+          <div class="field">
+            <label for="industry">What does the business do?</label>
+            <input type="text" id="industry" name="industry" placeholder="e.g. dental practice, moving company, boutique gym">
+          </div>
+          <div class="field">
+            <label for="website">Current website<span class="optional">optional</span></label>
+            <input type="text" id="website" name="website" placeholder="reyesfamilydental.com">
+          </div>
+          <div class="field">
+            <label for="email">Best email for this project</label>
+            <input type="email" id="email" name="email" placeholder="jordan@reyesfamilydental.com">
+          </div>
+          <div class="field">
+            <label for="phone">Phone<span class="optional">optional</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(410) 555-0148">
+          </div>
+        </section>
+
+        <!-- 2: WHAT YOU WANT -->
+        <section class="doc-section" id="s2" data-title="What you want">
+          <span class="qnum">SECTION 02 / 07</span>
+          <h2>What you want</h2>
+          <p class="sub">The part a feature list can't capture. Answer in your own words — there's no wrong length.</p>
+
+          <div class="field">
+            <label for="problem">What's frustrating or slow about how this gets handled today?</label>
+            <p class="hint">Phone tag, a spreadsheet, a whiteboard, a competitor's app you're tired of — whatever it is.</p>
+            <textarea id="problem" name="problem" placeholder="Right now we..."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="userStory">Walk me through someone actually using this, start to finish.</label>
+            <p class="hint">"They open the app, they see..., they tap..., they get a confirmation that..." — as real as you can make it.</p>
+            <textarea id="userStory" name="userStory" placeholder="They open the app and..."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="successLooksLike">If this works perfectly, what does a year from now look like?</label>
+            <textarea id="successLooksLike" name="successLooksLike" placeholder="e.g. fewer no-shows, bookings coming in overnight, my staff stops answering the same three questions all day."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="nonNegotiable">What's the one thing this absolutely has to get right, no matter what?</label>
+            <input type="text" id="nonNegotiable" name="nonNegotiable" placeholder="If everything else slipped, this still has to work.">
+          </div>
+
+          <div class="field">
+            <label for="dontWant">Anything you specifically don't want — a feature, a look, a vibe?</label>
+            <textarea id="dontWant" name="dontWant" placeholder="e.g. nothing that feels like a generic template, no forced account creation, no clutter."></textarea>
+          </div>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>If you had to pick, what matters most?</legend>
+              <label class="option"><input type="radio" name="priority" value="Launching fast"><span>Launching fast, even if version one is lean</span></label>
+              <label class="option"><input type="radio" name="priority" value="Keeping cost down"><span>Keeping the cost down</span></label>
+              <label class="option"><input type="radio" name="priority" value="Getting every feature right"><span>Getting every feature right, however long it takes</span></label>
+              <label class="option"><input type="radio" name="priority" value="A balance of all three"><span>A balance of all three</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label for="triedBefore">Tried anything before that didn't work out?<span class="optional">optional</span></label>
+            <p class="hint">Another app, a DIY builder, a previous developer — what happened, if anything.</p>
+            <textarea id="triedBefore" name="triedBefore" placeholder="If this is the first attempt, just say so."></textarea>
+          </div>
+        </section>
+
+        <!-- 3: THE APP ITSELF -->
+        <section class="doc-section" id="s3" data-title="The app itself">
+          <span class="qnum">SECTION 03 / 07</span>
+          <h2>The app itself</h2>
+          <p class="sub">Turning the above into something buildable.</p>
+
+          <div class="field">
+            <label for="oneLiner">In a sentence or two, what should someone be able to do with this app?</label>
+            <textarea id="oneLiner" name="oneLiner" placeholder="e.g. Book a cleaning, see their appointment history, and get a reminder text the day before."></textarea>
+          </div>
+
+          <div class="field">
+            <fieldset class="options row" style="border:0;padding:0;margin:0">
+              <legend>Where does it need to run?</legend>
+              <label class="option"><input type="checkbox" name="platform" value="iPhone (App Store)"><span>iPhone (App Store)</span></label>
+              <label class="option"><input type="checkbox" name="platform" value="Android (Google Play)"><span>Android (Google Play)</span></label>
+              <label class="option"><input type="checkbox" name="platform" value="Web app in the browser"><span>Web app, in the browser</span></label>
+              <label class="option"><input type="checkbox" name="platform" value="Not sure yet"><span>Not sure yet</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label for="comparable">Is there an app already out there close to what you picture?<span class="optional">optional</span></label>
+            <p class="hint">"Something like DoorDash, but for ___" is a perfectly good answer.</p>
+            <input type="text" id="comparable" name="comparable" placeholder="Something like ___ but for ___">
+          </div>
+
+          <div class="field">
+            <label for="audience">Who's opening this app most days?</label>
+            <textarea id="audience" name="audience" placeholder="e.g. Our existing patients, mostly 30–60, booking appointments from their phone."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="mustHaves">What are the 2–3 things it absolutely has to do on day one?</label>
+            <textarea id="mustHaves" name="mustHaves" placeholder="Everything else can wait. What can't?"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="laterPhases">Anything planned beyond version one?<span class="optional">optional</span></label>
+            <p class="hint">Phase two features, other locations, other markets — doesn't need to be decided, just noted.</p>
+            <textarea id="laterPhases" name="laterPhases" placeholder="Not required for launch, just good to know about."></textarea>
+          </div>
+        </section>
+
+        <!-- 4: ACCOUNTS, PAYMENTS, INTEGRATIONS -->
+        <section class="doc-section" id="s4" data-title="Accounts, payments &amp; integrations">
+          <span class="qnum">SECTION 04 / 07</span>
+          <h2>Accounts, payments &amp; integrations</h2>
+          <p class="sub">These shape the build more than almost anything else, so it's worth thinking through now.</p>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>Do people need to create an account or log in?</legend>
+              <label class="option"><input type="radio" name="accounts" value="Yes"><span>Yes</span></label>
+              <label class="option"><input type="radio" name="accounts" value="No"><span>No — anyone can use it without signing in</span></label>
+              <label class="option"><input type="radio" name="accounts" value="Not sure"><span>Not sure</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>Will the app take payments?</legend>
+              <label class="option"><input type="radio" name="payments" value="No payments"><span>No payments</span></label>
+              <label class="option"><input type="radio" name="payments" value="Yes, one-time purchases"><span>Yes — one-time purchases</span></label>
+              <label class="option"><input type="radio" name="payments" value="Yes, subscriptions"><span>Yes — recurring subscriptions</span></label>
+              <label class="option"><input type="radio" name="payments" value="Yes, paying out other people"><span>Yes — we pay out other people (marketplace-style)</span></label>
+              <label class="option"><input type="radio" name="payments" value="Not sure"><span>Not sure yet</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label for="integrations">Anything this needs to connect to?<span class="optional">optional</span></label>
+            <p class="hint">A payment processor, calendar, CRM, maps, email tool, your existing website — list what you've already got.</p>
+            <textarea id="integrations" name="integrations" placeholder="e.g. We use Square for payments and Google Calendar for bookings."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="existingTech">Any existing website, database, or app we'd be connecting to or replacing?<span class="optional">optional</span></label>
+            <textarea id="existingTech" name="existingTech" placeholder="If there's nothing, just say so."></textarea>
+          </div>
+        </section>
+
+        <!-- 5: DESIGN & CONTENT -->
+        <section class="doc-section" id="s5" data-title="Design &amp; content">
+          <span class="qnum">SECTION 05 / 07</span>
+          <h2>Design &amp; content</h2>
+          <p class="sub">What it looks like, and who's filling it with words and pictures.</p>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>Do you already have a logo and brand colors?</legend>
+              <label class="option"><input type="radio" name="brandAssets" value="Yes, ready to send over"><span>Yes, ready to send over</span></label>
+              <label class="option"><input type="radio" name="brandAssets" value="Somewhat — a logo, nothing formal"><span>Somewhat — a logo, nothing formal</span></label>
+              <label class="option"><input type="radio" name="brandAssets" value="No, starting from scratch"><span>No, starting from scratch</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label for="inspiration">Any apps or sites whose look you like?<span class="optional">optional</span></label>
+            <textarea id="inspiration" name="inspiration" placeholder="Names or links are both fine."></textarea>
+          </div>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>Who's handling the writing, photos, and video that go in the app?</legend>
+              <label class="option"><input type="radio" name="contentOwner" value="Launch Point will"><span>Launch Point will</span></label>
+              <label class="option"><input type="radio" name="contentOwner" value="We will"><span>We'll provide it</span></label>
+              <label class="option"><input type="radio" name="contentOwner" value="Split it"><span>Some of each</span></label>
+              <label class="option"><input type="radio" name="contentOwner" value="Not sure yet"><span>Not sure yet</span></label>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- 6: LOGISTICS & BUDGET -->
+        <section class="doc-section" id="s6" data-title="Logistics &amp; budget">
+          <span class="qnum">SECTION 06 / 07</span>
+          <h2>Logistics &amp; budget</h2>
+          <p class="sub">So we can shape a plan that actually fits.</p>
+
+          <div class="field">
+            <label for="launchDate">Is there a date this needs to be live by?<span class="optional">optional</span></label>
+            <input type="text" id="launchDate" name="launchDate" placeholder="e.g. before the holidays, or a specific date">
+          </div>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>What budget range are you working with?</legend>
+              <label class="option"><input type="radio" name="budget" value="Under $5,000"><span>Under $5,000</span></label>
+              <label class="option"><input type="radio" name="budget" value="$5,000–$15,000"><span>$5,000–$15,000</span></label>
+              <label class="option"><input type="radio" name="budget" value="$15,000–$40,000"><span>$15,000–$40,000</span></label>
+              <label class="option"><input type="radio" name="budget" value="$40,000+"><span>$40,000+</span></label>
+              <label class="option"><input type="radio" name="budget" value="Rather discuss on a call"><span>Rather discuss it on a call</span></label>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label for="decisionMakers">Anyone else who needs to sign off on this with you?<span class="optional">optional</span></label>
+            <input type="text" id="decisionMakers" name="decisionMakers" placeholder="A partner, a board, an office manager — or just you.">
+          </div>
+
+          <div class="field">
+            <fieldset class="options" style="border:0;padding:0;margin:0">
+              <legend>After it launches, who keeps it running?</legend>
+              <label class="option"><input type="radio" name="maintenance" value="Launch Point, on retainer"><span>Launch Point, on retainer</span></label>
+              <label class="option"><input type="radio" name="maintenance" value="We'll handle it ourselves"><span>We'll handle it ourselves</span></label>
+              <label class="option"><input type="radio" name="maintenance" value="Haven't thought about it yet"><span>Haven't thought about it yet</span></label>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- 7: ANYTHING ELSE -->
+        <section class="doc-section" id="s7" data-title="Anything else">
+          <span class="qnum">SECTION 07 / 07</span>
+          <h2>Anything else?</h2>
+          <p class="sub">Last section — add anything that didn't fit above.</p>
+
+          <div class="field">
+            <label for="anythingElse">Anything else we should know before we start?<span class="optional">optional</span></label>
+            <textarea id="anythingElse" name="anythingElse" placeholder="Concerns, must-avoids, a deadline we haven't mentioned, anything."></textarea>
+          </div>
+          <div class="field">
+            <label for="heardAbout">How'd you hear about Launch Point?<span class="optional">optional</span></label>
+            <input type="text" id="heardAbout" name="heardAbout" placeholder="Referral, Google, Instagram, etc.">
+          </div>
+        </section>
+
+        <div id="send">
+          <h2>Send it over</h2>
+          <p class="sub">This goes straight to Launch Point — no copying or emailing anything yourself.</p>
+          <button type="submit" class="btn-primary" id="submitBtn" style="width:100%">Send to Launch Point</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
